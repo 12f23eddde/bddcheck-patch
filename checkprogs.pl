@@ -396,8 +396,8 @@ int main()
         long long val2 = $proc2(check_point);
         if(val1 != val2)
         {
-            printf("Mismatch \\n$proc1($argstring) --> %lld [0x%llx]\\n", val1, val1);
-            printf("$proc2($argstring) --> %lld [0x%llx]\\n", val2, val2);
+            printf("Mismatch \\n$proc1(%lld [0x%llx]) --> %lld [0x%llx]\\n", check_point,check_point,val1, val1);
+            printf("$proc2(%lld [0x%llx]) --> %lld [0x%llx]\\n", check_point, check_point, val2, val2);
             return -1;
         }
     }
@@ -489,8 +489,8 @@ int main()
         long long val2 = $proc2(check_point, check_point2);
         if(val1 != val2)
         {
-            printf("Mismatch \\n$proc1($argstring) --> %lld [0x%llx]\\n", val1, val1);
-            printf("$proc2($argstring) --> %lld [0x%llx]\\n", val2, val2);
+            printf("Mismatch \\n$proc1(%lld [0x%llx], %lld [0x%llx]) --> %lld [0x%llx]\\n", check_point,check_point,check_point2,check_point2, val1, val1);
+            printf("$proc2(%lld [0x%llx], %lld [0x%llx]) --> %lld [0x%llx]\\n", check_point,check_point,check_point2,check_point2,val2, val2);
             printf(".. A genuine counterexample\\n");
             return -1;
         }
