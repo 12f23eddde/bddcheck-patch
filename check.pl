@@ -39,7 +39,7 @@ if ($opt_v) {
 }
 
 # Set time limit
-$FLAGS = $FLAGS . " -T 30";
+$FLAGS = $FLAGS . " -T 300";
 
 # # ======================= my code begin
 # # given a file, decode it, generate a tmp file which is decoded, use it , and then delete it.
@@ -149,7 +149,7 @@ if ($opt_f) {
       $result =  `$PROG $FLAGS $patarg -f $Fsolve -p $fun -F $Fref -P test_$fun` ||
   "Executing '$PROG $FLAGS $patarg -f $Fsolve -p $fun -F $Fref -P test_$fun' gives Error\n";
       if (!$opt_g) {
-        print $result;
+  print $result;
       }
 
   # my code here
